@@ -6,8 +6,6 @@ import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import googleIcon from '../images/google-icon.png';
 import facebookIcon from '../images/facebook-icon.png';
 import philantrolinkLogo from '../images/philantrolink-logo.png';
-import showPasswordIcon from '../images/show-password.png';
-import hidePasswordIcon from '../images/hide-password.png';
 
 function SignIn() {
   // State variables to store error message, email, and password
@@ -72,7 +70,6 @@ function SignIn() {
 
   return (
     <div className={`sign-in-container blue-background`}>
-      {/* Entire sign-in content including left content and form */}
       <div className='left-content'>
         <img src={philantrolinkLogo} alt='Philantrolink Logo' className='left-image' />
         <p><b>Philantrolink</b></p>

@@ -63,7 +63,6 @@ function SignUp() {
 
   return (
     <div className={`sign-in-container blue-background`}>
-      {/* Entire sign-in content including left content and form */}
       <div className='left-content'>
         <img src={philantrolinkLogo} alt='Philantrolink Logo' className='left-image' />
         <p><b>Philantrolink</b></p>
