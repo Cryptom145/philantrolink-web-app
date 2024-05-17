@@ -199,7 +199,7 @@ input[type='password'].has-content {
 
 .app-header-dashboard {
   background-color: #add8e6;
-  padding: 0% 15%;
+  padding: 0% 12%;
   flex-shrink: 0;
   width: 100%;
   z-index: 0;
