@@ -1,4 +1,5 @@
 import React from 'react';
+import userIcon from '../images/user-icon.png';
 
 function Dashboard() {
   return (
@@ -9,7 +10,10 @@ function Dashboard() {
             <input type="text" placeholder="Search..." />
             <button>Search</button>
           </div>
-          <h1>Test User</h1>
+          <div className="user-info">
+            <img src={userIcon} alt="User Icon" className="user-icon" />
+            <p className ="user-desc">Test User</p>
+          </div>
         </div>
       </header>
       <div className="sidebar-dashboard">

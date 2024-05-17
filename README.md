@@ -4,9 +4,9 @@ This project utilizes React and Firebase to create the web application of Philan
 
 ## Getting Started
 
-Run npm install on your device after cloning the code to install the necessary node modules.
+Run **npm install** on your device after cloning the code to install the necessary node modules.
 
-Run npm run dev to run the application locally.
+Run **npm run dev** to run the application locally.
 
 For sample user:
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import philantrolinkLogo from '../images/philantrolink-logo.png';
 import getStartedImage from '../images/get-started-image.png'; 
 import '../styles/GetStarted.css';
