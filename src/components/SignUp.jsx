@@ -49,6 +49,12 @@ function SignUp() {
     }
   };
 
+  const signInWithFacebook = () => {
+
+    alert("Facebook login is not implemented yet. Stay tuned!");
+  
+  };
+
   const toggleBackgroundImage = (input) => {
     if (input.value.trim() !== '') {
       input.classList.add('has-content');
@@ -99,7 +105,7 @@ function SignUp() {
             <div className='or-divider'>or with</div>
             <div className='social-login'>
               <img src={googleIcon} alt='Google' className='google-login' onClick={signInWithGoogle} />
-              <img src={facebookIcon} alt='Facebook' className='facebook-login'/>
+              <img src={facebookIcon} alt='Facebook' className='facebook-login' onClick={signInWithFacebook}/>
             </div>
             <p className='register-link' onClick={goToSignIn}>Have an account already? Sign in</p>
           </div>

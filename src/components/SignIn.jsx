@@ -52,16 +52,18 @@ function SignIn() {
     }
   };
 
+  const signInWithFacebook = () => {
+
+    alert("Facebook login is not implemented yet. Stay tuned!");
+  
+  };
+
   const toggleBackgroundImage = (input) => {
     if (input.value.trim() !== '') {
       input.classList.add('has-content');
     } else {
       input.classList.remove('has-content');
     }
-  };
-
-   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
   };
 
   const goToSignUp = () => {
@@ -105,7 +107,7 @@ function SignIn() {
             <div className='or-divider'>or with</div>
             <div className='social-login'>
               <img src={googleIcon} alt='Google' className='google-login' onClick={signInWithGoogle} />
-              <img src={facebookIcon} alt='Facebook' className='facebook-login'/>
+              <img src={facebookIcon} alt='Facebook' className='facebook-login' onClick={signInWithFacebook}/>
             </div>
             <p className='register-link' onClick={goToSignUp}>Don't have an account? Sign up</p>
           </div>
