@@ -185,7 +185,7 @@ input[type='password'].has-content {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #073e79;
+  background-color: #195392;
   width: 200px; /* Fixed width for the sidebar */
   height: 100%; /* Occupy full height of the parent container */
 }
@@ -198,7 +198,7 @@ input[type='password'].has-content {
 }
 
 .app-header-dashboard {
-  background-color: #add8e6;
+  background-color: #a2c5e2;
   padding: 0% 12%;
   flex-shrink: 0;
   width: 100%;
