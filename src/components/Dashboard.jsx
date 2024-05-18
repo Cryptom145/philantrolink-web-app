@@ -1,5 +1,6 @@
 import React from 'react';
 import userIcon from '../images/user-icon.png';
+import philantrolinkLogo from '../images/philantrolink-logo.png';
 
 function Dashboard() {
   return (
@@ -12,13 +13,16 @@ function Dashboard() {
           </div>
           <div className="user-info">
             <img src={userIcon} alt="User Icon" className="user-icon" />
-            <p className ="user-desc">Test User</p>
+            <p className="user-desc">Test User</p>
           </div>
         </div>
       </header>
       <div className="sidebar-dashboard">
-        <h1>Sidebar</h1>
-        {/* Sidebar content goes here */}
+        <div className="sidebar-content">
+          <img src={philantrolinkLogo} alt="Philantrolink Logo" className="sidebar-logo" />
+          <h1 className="sidebar-title">Philantrolink</h1>
+        </div>
+        {/* Additional sidebar content goes here */}
       </div>
       <div className="content-dashboard">
         <h1>Philantrolink Status</h1>
