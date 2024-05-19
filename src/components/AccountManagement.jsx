@@ -15,6 +15,14 @@ function AccountManagement() {
     navigate('/account-management');
   };
 
+  const goToEventManager = () => {
+    navigate('/event-manager');
+  };
+
+  const goToTransactions = () => {
+    navigate('/transactions');
+  };
+
   const goToProfile = () => {
     navigate('/profile');
   };
@@ -22,6 +30,7 @@ function AccountManagement() {
   const goToSettings = () => {
     navigate('/settings');
   };
+
 
   return (
     <div className="app-wrapper-dashboard">
@@ -55,12 +64,32 @@ function AccountManagement() {
           >
             Account Management
           </button>
-          <button className="sidebar-button">Event Manager</button>
-          <button className="sidebar-button">Transactions</button>
+          <button
+            className={`sidebar-button ${location.pathname === '/event-manager' ? 'active' : ''}`}
+            onClick={goToEventManager}
+          >
+            Event Manager
+          </button>
+          <button
+            className={`sidebar-button ${location.pathname === '/transactions' ? 'active' : ''}`}
+            onClick={goToTransactions}
+          >
+            Transactions
+          </button>
         </div>
         <div className="sidebar-bottom-buttons">
-          <button className="sidebar-button" onClick={goToProfile}>Profile</button>
-          <button className="sidebar-button" onClick={goToSettings}>Settings</button>
+          <button
+            className={`sidebar-button ${location.pathname === '/profile' ? 'active' : ''}`}
+            onClick={goToProfile}
+          >
+            Profile
+          </button>
+          <button
+            className={`sidebar-button ${location.pathname === '/settings' ? 'active' : ''}`}
+            onClick={goToSettings}
+          >
+            Settings
+          </button>
         </div>
       </div>
       <div className="content-dashboard">

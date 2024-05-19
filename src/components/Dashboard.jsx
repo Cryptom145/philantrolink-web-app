@@ -77,8 +77,18 @@ function Dashboard() {
           </button>
         </div>
         <div className="sidebar-bottom-buttons">
-          <button className="sidebar-button" onClick={goToProfile}>Profile</button>
-          <button className="sidebar-button" onClick={goToSettings}>Settings</button>
+          <button
+            className={`sidebar-button ${location.pathname === '/profile' ? 'active' : ''}`}
+            onClick={goToProfile}
+          >
+            Profile
+          </button>
+          <button
+            className={`sidebar-button ${location.pathname === '/settings' ? 'active' : ''}`}
+            onClick={goToSettings}
+          >
+            Settings
+          </button>
         </div>
       </div>
       <div className="content-dashboard">

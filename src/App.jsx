@@ -1,4 +1,3 @@
-// App.js
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { auth } from './configs/firebase';
@@ -14,6 +13,7 @@ import EventManager from './components/EventManager';
 import Transactions from './components/Transactions';
 import Profile from './components/Profile';
 import Settings from './components/Settings';
+import LoadingSpinner from './components/LoadingSpinner'; // Import the LoadingSpinner component
 
 function App() {
   const [user, setUser] = useState(null);
@@ -34,7 +34,7 @@ function App() {
   return (
     <div>
       {loading ? (
-        <div>Loading...</div>
+        <LoadingSpinner /> // Use the LoadingSpinner component
       ) : (
         <div style={{ backgroundColor: user ? '#ffffff' : '#073e79' }}>
           {user && <button onClick={onSignOut} className="sign-out">Sign out</button>}

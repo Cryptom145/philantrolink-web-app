@@ -1,3 +1,5 @@
+/* Body */
+
 body, html {
   margin: 0;
   padding: 0;
@@ -78,6 +80,7 @@ body {
 
 .input-label {
   font-size: 14px;
+  font-family: Inter;
   margin-bottom: 5px;
 }
 
@@ -86,6 +89,7 @@ input[type='password'] {
   padding: 12px 16px;
   margin-bottom: 10px;
   font-size: 18px;
+  font-family: Inter;
   width: calc(100%);
   box-sizing: border-box;
   background-image: url('images/email-icon.png');
@@ -136,10 +140,15 @@ input[type='password'].has-content {
 
 .login {
   border-radius: 10px;
-  width: 50%;
+  border: 0;
+  width: 100%;
   padding: 12px 0;
   margin-bottom: 10px;
+  font-family: Inter;
   font-size: 20px;
+  cursor: pointer;
+  background-color: #1780f1;
+  color: white;
 }
 
 .or-divider {
@@ -152,6 +161,7 @@ input[type='password'].has-content {
   width: 200px;
   height: auto;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .register-link {
@@ -159,11 +169,13 @@ input[type='password'].has-content {
   font-size: 14px;
   color: #007bff;
   cursor: pointer;
+  font-family: Inter;
 }
 
 .error {
   color: red;
   margin-bottom: 20px;
+  font-family: Inter;
 }
 
 /* Dashboard css */
@@ -216,15 +228,15 @@ input[type='password'].has-content {
 }
 
 .sidebar-logo {
-  width: 35px;
+  width: 40px;
   height: auto;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .sidebar-title {
   color: white;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .sidebar-buttons {
@@ -261,6 +273,7 @@ input[type='password'].has-content {
 .sidebar-button.active {
   background-color: #d3d3d3;
   font-weight: bold;
+  font-family: Inter;
   color: #073e79;
 }
 
