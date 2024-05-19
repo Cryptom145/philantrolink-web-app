@@ -103,7 +103,7 @@ function SignIn() {
             />
           </div>
           <div className='button-container'>
-            <button className='login' onClick={signInWithEmail}>Login with Email</button>
+            <button className='login' onClick={signInWithEmail}>Login</button>
             <div className='or-divider'>or with</div>
             <div className='social-login'>
               <img src={googleIcon} alt='Google' className='google-login' onClick={signInWithGoogle} />
