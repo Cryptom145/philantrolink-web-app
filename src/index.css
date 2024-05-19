@@ -44,6 +44,11 @@ body {
 .left-image {
   width: 133%;
   height: 133%;
+  padding-top: 20%;
+  
+}
+.banner-text{
+  margin-top: 13%;
 }
 
 .form {
@@ -59,7 +64,7 @@ body {
   text-align: left;
   font-family: Inter;
   font-size: 30px;
-  color: rgb(17, 9, 102);
+  color: #073e79;
 }
 
 .subtitle {
@@ -93,6 +98,10 @@ input[type='password'] {
   background-position: 10px center;
   background-size: 24px 24px;
   padding-left: 34px;
+  border-radius: 10px;
+  /* border-color: #195392; */
+  border: 0;
+  background-color: #d3d3d3;
 }
 
 input[type='password'] {
@@ -101,7 +110,7 @@ input[type='password'] {
 
 input[type='email'].has-content,
 input[type='password'].has-content {
-  background-image: none;
+  /* background-image: none; */
 }
 
 .password-input {
@@ -131,20 +140,25 @@ input[type='password'].has-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .login {
   border-radius: 10px;
-  width: 50%;
+  border: 0;
+  width: 100%;
   padding: 12px 0;
   margin-bottom: 10px;
   font-size: 20px;
+  cursor: pointer;
+  background-color: #1780f1;
+  color: white;
 }
 
 .or-divider {
   text-align: center;
   margin: 5px 0;
+  font-family: Inter;
 }
 
 .google-login,
@@ -152,6 +166,7 @@ input[type='password'].has-content {
   width: 200px;
   height: auto;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .register-link {
@@ -159,11 +174,13 @@ input[type='password'].has-content {
   font-size: 14px;
   color: #007bff;
   cursor: pointer;
+  font-family: Inter;
 }
 
 .error {
   color: red;
   margin-bottom: 20px;
+  font-family: Inter;
 }
 
 /* Dashboard css */
@@ -330,4 +347,8 @@ input[type='password'].has-content {
   padding: 8px 16px;
   cursor: pointer;
   z-index: 2;
+}
+
+.google-login{
+  cursor: pointer;
 }

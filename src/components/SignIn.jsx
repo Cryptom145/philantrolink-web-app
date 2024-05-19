@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 
 import googleIcon from '../images/google-icon.png';
 import facebookIcon from '../images/facebook-icon.png';
-import philantrolinkLogo from '../images/philantrolink-logo.png';
+import philantrolinkLogo from '../images/philantrolink-logo2.png';
 
 function SignIn() {
   // State variables to store error message, email, and password
@@ -74,37 +74,37 @@ function SignIn() {
     <div className={`sign-in-container blue-background`}>
       <div className='left-content'>
         <img src={philantrolinkLogo} alt='Philantrolink Logo' className='left-image' />
-        <p><b>Philantrolink</b></p>
+        <p className='banner-text'><b>Philantrolink</b></p>
       </div> 
       <div className='content'>
         <div className='form'>
           <div className='title-container'>
             <h1 className='title'>Log-in</h1>
-            <div className='error'>{errorMessage}</div>
           </div>
           <div className='input-container'>
-            <div className='input-label'>Email</div>
+            {/* <div className='input-label'></div> */}
             <input
               type='email'
-              placeholder=''
+              placeholder='Email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onInput={(e) => toggleBackgroundImage(e.target)}
             />
           </div>
           <div className='input-container'>
-            <div className='input-label'>Password</div>
+            {/* <div className='input-label'></div> */}
             <input
               type='password'
-              placeholder=''
+              placeholder='Password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onInput={(e) => toggleBackgroundImage(e.target)}
             />
           </div>
           <div className='button-container'>
-            <button className='login' onClick={signInWithEmail}>Login with Email</button>
-            <div className='or-divider'>or with</div>
+          <div className='error'>{errorMessage}</div>
+            <button className='login' onClick={signInWithEmail}>Login</button>
+            {/* <div className='or-divider'>or login with</div> */}
             <div className='social-login'>
               <img src={googleIcon} alt='Google' className='google-login' onClick={signInWithGoogle} />
               <img src={facebookIcon} alt='Facebook' className='facebook-login' onClick={signInWithFacebook}/>
