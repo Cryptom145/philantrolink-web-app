@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+// App.js
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { auth } from './configs/firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
@@ -9,6 +10,10 @@ import Dashboard from './components/Dashboard';
 import Error404 from './components/Error404';
 import GetStarted from './components/GetStarted';
 import AccountManagement from './components/AccountManagement';
+import EventManager from './components/EventManager';
+import Transactions from './components/Transactions';
+import Profile from './components/Profile';
+import Settings from './components/Settings';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -40,6 +45,10 @@ function App() {
                 <Route path="/sign-in" element={user ? <Navigate to="/" /> : <SignIn />} />
                 <Route path="/" element={user ? <Dashboard /> : <GetStarted />} />
                 <Route path="/account-management" element={user ? <AccountManagement /> : <GetStarted />} />
+                <Route path="/event-manager" element={user ? <EventManager /> : <GetStarted />} />
+                <Route path="/transactions" element={user ? <Transactions /> : <GetStarted />} />
+                <Route path="/profile" element={user ? <Profile /> : <GetStarted />} />
+                <Route path="/settings" element={user ? <Settings /> : <GetStarted />} />
                 <Route path="*" element={<Error404 />} />
               </Routes>
             </Router>

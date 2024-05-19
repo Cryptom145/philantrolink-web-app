@@ -5,7 +5,7 @@ import philantrolinkLogo from '../images/philantrolink-logo.png';
 
 function AccountManagement() {
   const navigate = useNavigate();
-  const location = useLocation(); // Use useLocation hook
+  const location = useLocation();
 
   const goToDashboard = () => {
     navigate('/');
@@ -13,6 +13,14 @@ function AccountManagement() {
 
   const goToAccountManagement = () => {
     navigate('/account-management');
+  };
+
+  const goToProfile = () => {
+    navigate('/profile');
+  };
+
+  const goToSettings = () => {
+    navigate('/settings');
   };
 
   return (
@@ -49,6 +57,10 @@ function AccountManagement() {
           </button>
           <button className="sidebar-button">Event Manager</button>
           <button className="sidebar-button">Transactions</button>
+        </div>
+        <div className="sidebar-bottom-buttons">
+          <button className="sidebar-button" onClick={goToProfile}>Profile</button>
+          <button className="sidebar-button" onClick={goToSettings}>Settings</button>
         </div>
       </div>
       <div className="content-dashboard">

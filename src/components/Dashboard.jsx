@@ -1,11 +1,11 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom'; // Import useLocation
+import { useNavigate, useLocation } from 'react-router-dom';
 import userIcon from '../images/user-icon.png';
 import philantrolinkLogo from '../images/philantrolink-logo.png';
 
 function Dashboard() {
   const navigate = useNavigate();
-  const location = useLocation(); // Use useLocation hook
+  const location = useLocation();
 
   const goToDashboard = () => {
     navigate('/');
@@ -13,6 +13,22 @@ function Dashboard() {
 
   const goToAccountManagement = () => {
     navigate('/account-management');
+  };
+
+  const goToEventManager = () => {
+    navigate('/event-manager');
+  };
+
+  const goToTransactions = () => {
+    navigate('/transactions');
+  };
+
+  const goToProfile = () => {
+    navigate('/profile');
+  };
+
+  const goToSettings = () => {
+    navigate('/settings');
   };
 
   return (
@@ -47,8 +63,22 @@ function Dashboard() {
           >
             Account Management
           </button>
-          <button className="sidebar-button">Event Manager</button>
-          <button className="sidebar-button">Transactions</button>
+          <button
+            className={`sidebar-button ${location.pathname === '/event-manager' ? 'active' : ''}`}
+            onClick={goToEventManager}
+          >
+            Event Manager
+          </button>
+          <button
+            className={`sidebar-button ${location.pathname === '/transactions' ? 'active' : ''}`}
+            onClick={goToTransactions}
+          >
+            Transactions
+          </button>
+        </div>
+        <div className="sidebar-bottom-buttons">
+          <button className="sidebar-button" onClick={goToProfile}>Profile</button>
+          <button className="sidebar-button" onClick={goToSettings}>Settings</button>
         </div>
       </div>
       <div className="content-dashboard">
