@@ -32,7 +32,7 @@ body {
 
 .left-content {
   font-size: 80px;
-  font-family: sans-serif;
+  font-family: Inter;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,14 +58,14 @@ body {
 
 .title {
   text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter;
   font-size: 30px;
   color: rgb(17, 9, 102);
 }
 
 .subtitle {
   text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter;
   font-size: 20px;
   color: rgb(17, 9, 102);
 }
@@ -201,32 +201,66 @@ input[type='password'].has-content {
 .sidebar-dashboard {
   position: fixed;
   background-color: #195392;
-  width: 250px; /* Increased width for the sidebar */
-  height: 100%; /* Occupy full height of the parent container */
+  width: 250px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px; /* Add padding to the top */
+  padding-top: 20px;
 }
 
 .sidebar-content {
   display: flex;
-  flex-direction: row; /* Change to row to align items side by side */
+  flex-direction: row;
   align-items: center;
   text-align: center;
+  margin-bottom: 20px; /* Add space below the logo and title */
 }
 
 .sidebar-logo {
-  width: 50px; /* Adjust the width of the logo */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Add space to the right of the logo */
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .sidebar-title {
-  color: white; /* Change font color to white */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px; /* Adjust the font size */
+  color: white;
+  font-family: Inter;
+  font-size: 24px;
 }
+
+.sidebar-buttons {
+  display: flex;                       
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure buttons take full width */
+  margin-top: 40px; /* Space above the buttons */
+}
+
+.sidebar-button {
+  background-color: #195392; /* Match the sidebar background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0; /* Space between buttons */
+  width: 80%; /* Adjust width as needed */
+  text-align: left;
+  cursor: pointer;
+  font-family: Inter;
+  font-size: 16px;
+}
+
+.sidebar-button.active {
+  background-color: #d3d3d3; /* Light grey background */
+  font-weight: bold; /* Make the font bold */
+  color: #073e79; /* Change the text color */
+}
+
+.sidebar-button:hover {
+  background-color: #f0f0f0; /* Slightly darker grey for hover */
+}
+
 
 .content-dashboard {
   margin-left: 250px; /* Adjust margin to leave space for the sidebar */
@@ -260,11 +294,12 @@ input[type='password'].has-content {
 .user-info {
   display: flex;
   align-items: center;
-  margin-right: 150px;
+  margin-right: 140px;
   border-radius: 60px; 
   padding: 1px 7px; 
   background-color: #ffffff; 
   gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -278,7 +313,6 @@ input[type='password'].has-content {
   width: 33px;
   height: 33px;
 }
-
 
 .sign-out {
   position: absolute;

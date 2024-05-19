@@ -8,6 +8,7 @@ import SignUp from './components/SignUp';
 import Dashboard from './components/Dashboard';
 import Error404 from './components/Error404';
 import GetStarted from './components/GetStarted';
+import AccountManagement from './components/AccountManagement';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/sign-up" element={user ? <Navigate to="/" /> : <SignUp />} />
                 <Route path="/sign-in" element={user ? <Navigate to="/" /> : <SignIn />} />
                 <Route path="/" element={user ? <Dashboard /> : <GetStarted />} />
+                <Route path="/account-management" element={user ? <AccountManagement /> : <GetStarted />} />
                 <Route path="*" element={<Error404 />} />
               </Routes>
             </Router>

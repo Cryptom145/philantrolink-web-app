@@ -1,9 +1,9 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom'; // Import useLocation
+import { useNavigate, useLocation } from 'react-router-dom';
 import userIcon from '../images/user-icon.png';
 import philantrolinkLogo from '../images/philantrolink-logo.png';
 
-function Dashboard() {
+function AccountManagement() {
   const navigate = useNavigate();
   const location = useLocation(); // Use useLocation hook
 
@@ -52,11 +52,11 @@ function Dashboard() {
         </div>
       </div>
       <div className="content-dashboard">
-        <h1>Philantrolink Status</h1>
-        <p>This is the main content of the dashboard.</p>
+        <h1>Account Management</h1>
+        <p>This is the main content of the account management.</p>
       </div>
     </div>
   );
 }
 
-export default Dashboard;
+export default AccountManagement;
