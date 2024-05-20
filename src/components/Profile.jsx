@@ -92,8 +92,20 @@ function Profile() {
         </div>
       </div>
       <div className="content-dashboard">
-        <h1>Profile</h1>
-        <p>This is the main content of profile.</p>
+      <h1 className="content-title2">My Profile</h1>
+        <div className="profile-info">
+          <div className="profile-info-container">
+            <img src={userIcon} alt="User Icon" className="profile-pic" />
+            <div className="profile-text">
+              <h1 className = "profile-title" >Test User</h1>
+              <h2 className = "profile-position">Administrator</h2>
+              <h3 className = "profile-email">test@test.com</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.	</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

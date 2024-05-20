@@ -183,7 +183,7 @@ function Dashboard() {
                           Check Geolocation
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          Main content of geolocation
+                          Details about geolocation of events.
                         </Typography>
                       </CardContent>
                     </Grid>

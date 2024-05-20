@@ -414,12 +414,14 @@ input[type='password'].has-content {
 
 @media only screen and (max-width: 768px) {
  .responsive-table {
+    font-family: Inter;
     font-size: 14px;
   }
 }
 
 @media only screen and (max-width: 480px) {
  .responsive-table {
+  font-family: Inter;
     font-size: 12px;
   }
 }
@@ -434,12 +436,41 @@ input[type='password'].has-content {
   background: none;
   border: none;
   cursor: pointer;
+  font-family: Inter;
   font-size: 18px;
 }
 
 .action-button:hover {
   color: #007bff;
 }
+
+.profile-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-family: Inter;
+  text-align: left;
+}
+
+.profile-title {
+  font-size: 30px;
+}
+
+.profile-position {
+  font-size: 18px;
+}
+
+.profile-email {
+  font-size: 15px;
+}
+
+.profile-pic {
+  margin-top: 15px;
+  width: 125px; 
+  height: 125px; 
+}
+
 
 .settings-buttons {
   display: flex;
