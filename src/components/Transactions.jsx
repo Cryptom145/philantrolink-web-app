@@ -92,8 +92,39 @@ function Transactions() {
         </div>
       </div>
       <div className="content-dashboard">
-        <h1>Transactions</h1>
-        <p>This is the main content of transactions.</p>
+        <h1 className="content-title2">Transactions</h1>
+        <div className="table-container">
+          <table className="responsive-table">
+            <thead>
+              <tr>
+                <th>Transaction ID</th>
+                <th>Account ID</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Balance</th>
+                <th>Event ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>21</td>
+                <td>2</td>
+                <td>May 28, 2024</td>
+                <td>5:00 PM</td>
+                <td>₱15000</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>3</td>
+                <td>May 29, 2024</td>
+                <td>6:00 PM</td>
+                <td>₱5000</td>
+                <td>11</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

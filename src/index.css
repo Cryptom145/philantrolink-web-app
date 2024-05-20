@@ -372,3 +372,68 @@ input[type='password'].has-content {
   font-family: Inter;
   font-size: 18px;
 }
+
+.content-title2 {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-family: Inter;
+  font-size: 24px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Inter;
+}
+
+.responsive-table th,.responsive-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.responsive-table th {
+  background-color: #aed5f5;
+}
+
+.responsive-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* light gray */
+}
+
+.responsive-table tr:nth-child(odd) {
+  background-color: #fff; /* white */
+}
+
+@media only screen and (max-width: 768px) {
+ .responsive-table {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+ .responsive-table {
+    font-size: 12px;
+  }
+}
+
+/* Add CSS for the action buttons */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.action-button:hover {
+  color: #007bff;
+}
