@@ -198,6 +198,7 @@ input[type='password'].has-content {
   left: 250px;
   height: 80px;
   box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -253,7 +254,7 @@ input[type='password'].has-content {
   padding: 1px 7px;
   background-color: #ffffff;
   gap: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .user-desc {
@@ -298,6 +299,7 @@ input[type='password'].has-content {
   align-items: center;
   padding-top: 20px;
   position: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-content {
@@ -362,13 +364,13 @@ input[type='password'].has-content {
   background-color: #f0f0f0;
 }
 
+/* Content */
+
 .content-dashboard {
   margin-left: 250px;
   padding: 80px 20px 20px 20px;
   flex: 1;
 }
-
-/* Content */
 
 .content-title {
   color: black;
