@@ -13,7 +13,8 @@ import EventManager from './components/EventManager';
 import Transactions from './components/Transactions';
 import Profile from './components/Profile';
 import Settings from './components/Settings';
-import LoadingSpinner from './components/LoadingSpinner'; // Import the LoadingSpinner component
+import Geolocation from './components/Geolocation';
+import LoadingSpinner from './components/LoadingSpinner'; 
 
 function App() {
   const [user, setUser] = useState(null);
@@ -34,7 +35,7 @@ function App() {
   return (
     <div>
       {loading ? (
-        <LoadingSpinner /> // Use the LoadingSpinner component
+        <LoadingSpinner />
       ) : (
         <div style={{ backgroundColor: user ? '#ffffff' : '#073e79' }}>
           {user && <button onClick={onSignOut} className="sign-out">Sign out</button>}
@@ -49,6 +50,7 @@ function App() {
                 <Route path="/transactions" element={user ? <Transactions /> : <GetStarted />} />
                 <Route path="/profile" element={user ? <Profile /> : <GetStarted />} />
                 <Route path="/settings" element={user ? <Settings /> : <GetStarted />} />
+                <Route path="/geolocation" element={user ? <Geolocation /> : <GetStarted />} />
                 <Route path="*" element={<Error404 />} />
               </Routes>
             </Router>

@@ -101,7 +101,7 @@ function SignUp() {
             />
           </div>
           <div className='button-container'>
-            <button className='login' onClick={signUpWithEmail}>Sign Upl</button>
+            <button className='login' onClick={signUpWithEmail}>Sign Up</button>
             <div className='or-divider'>or with</div>
             <div className='social-login'>
               <img src={googleIcon} alt='Google' className='google-login' onClick={signInWithGoogle} />
