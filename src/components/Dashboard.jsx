@@ -154,7 +154,7 @@ function Dashboard() {
         </div>
       </div>
       <div className="content-dashboard">
-        <p className="content-title">Philantrolink Status</p>
+        <h1 className="content-title">Philantrolink Status</h1>
         {searchResults.length > 0 ? (
           <div className="search-results">
             {searchResults.map((result, index) => (
@@ -191,7 +191,7 @@ function Dashboard() {
                 </CardActionArea>
               </Card>
             </div>
-            <p className="content-title">Summary</p>
+            <h1 className="content-title">Summary</h1>
             <div className="content-summary" style={{ border: 'none' }}>
               <Card sx={{ width: '100%', margin: 'auto', p: 0.1, boxShadow: 'none' }}>
                 <Grid container spacing={2}>

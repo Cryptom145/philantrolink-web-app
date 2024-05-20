@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import userIcon from '../images/user-icon.png';
 import philantrolinkLogo from '../images/philantrolink-logo.png';
 
 function Settings() {
-  const navigate = useNavigate();
   const location = useLocation();
+  const [activeSection, setActiveSection] = useState('profile');
+  const navigate = useNavigate();
 
   const goToDashboard = () => {
     navigate('/');
@@ -29,6 +30,19 @@ function Settings() {
 
   const goToSettings = () => {
     navigate('/settings');
+  };
+
+  const renderContent = () => {
+    switch (activeSection) {
+      case 'profile':
+        return <div>Edit Profile content goes here.</div>;
+      case 'chats':
+        return <div>Chats content goes here.</div>;
+      case 'helpSupport':
+        return <div>Help & Support content goes here.</div>;
+      default:
+        return <div>Select an option from the settings menu.</div>;
+    }
   };
 
   return (
@@ -92,8 +106,30 @@ function Settings() {
         </div>
       </div>
       <div className="content-dashboard">
-        <h1>Settings</h1>
-        <p>This is the main content of settings.</p>
+        <h1 className="content-title">Settings</h1>
+        <div className="settings-buttons">
+          <button
+            className={`settings-button ${activeSection === 'profile' ? 'active' : ''}`}
+            onClick={() => setActiveSection('profile')}
+          >
+            Edit Profile
+          </button>
+          <button
+            className={`settings-button ${activeSection === 'chats' ? 'active' : ''}`}
+            onClick={() => setActiveSection('chats')}
+          >
+            Chats
+          </button>
+          <button
+            className={`settings-button ${activeSection === 'helpSupport' ? 'active' : ''}`}
+            onClick={() => setActiveSection('helpSupport')}
+          >
+            Help & Support
+          </button>
+        </div>
+        <div className="settings-content">
+          {renderContent()}
+        </div>
       </div>
     </div>
   );
