@@ -64,9 +64,46 @@ function Settings() {
           </div>
         );
       case 'chats':
-        return <div>Chats content goes here.</div>;
+        return (
+          <div className="chats-content">
+            <h2>Chats</h2>
+            <div className="chat-box">
+              <div className="chat-message received">
+                <p>Hi there! How can I help you today?</p>
+                <span className="timestamp">10:00 AM</span>
+              </div>
+              <div className="chat-message sent">
+                <p>I need some assistance with my account.</p>
+                <span className="timestamp">10:01 AM</span>
+              </div>
+              <div className="chat-message received">
+                <p>Sure, what seems to be the issue?</p>
+                <span className="timestamp">10:02 AM</span>
+              </div>
+            </div>
+          </div>
+        );
       case 'helpSupport':
-        return <div>Help & Support content goes here.</div>;
+        return (
+          <div className="help-support-content">
+            <h2>Need support?</h2>
+            <form className="help-support-form">
+              <div className="form-group">
+                <label htmlFor="supportName">Name</label>
+                <input type="text" id="supportName" name="supportName" placeholder="Name" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="supportEmail">Email</label>
+                <input type="text" id="supportEmail" name="supportEmail" placeholder="Email" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="supportDetails">Please enter details here</label>
+                <textarea id="supportDetails" name="supportDetails" placeholder="Please enter details here"></textarea>
+              </div>
+              <button type="submit" className="submit-button">Contact Us!</button>
+            </form>
+          </div>
+        );
       default:
         return <div>Select an option from the settings menu.</div>;
     }

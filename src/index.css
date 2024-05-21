@@ -561,9 +561,105 @@ input[type='password'].has-content {
   align-self: flex-end;
 }
 
+.chats-content {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 60%;
+  font-family: Inter;
+  font-size: 14px;
+  position: relative;
+}
+
+.chat-message.received {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+}
+
+.chat-message.sent {
+  background-color: #195392;
+  color: white;
+  align-self: flex-end;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #999999;
+  position: absolute;
+  bottom: -18px;
+  right: 10px;
+}
+
 .save-button:hover {
   background-color: #f0f0f0;
   color: #195392;
+}
+
+/* Help & Support Content */
+.help-support-content {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.help-support-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.help-support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.help-support-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-support-form .form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.help-support-form .form-group input,
+.help-support-form .form-group textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.help-support-form .form-group textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #195392;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #163e72;
 }
 
 .geolocation-map-container {
