@@ -39,7 +39,7 @@ function Profile() {
             <input type="text" placeholder="Search..." />
             <button>Search</button>
           </div>
-          <div className="user-info">
+          <div className="user-info" onClick={goToProfile} style={{ cursor: 'pointer' }}>
             <img src={userIcon} alt="User Icon" className="user-icon" />
             <p className="user-desc">Test User</p>
           </div>

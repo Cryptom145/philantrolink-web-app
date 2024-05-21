@@ -255,6 +255,7 @@ input[type='password'].has-content {
   background-color: #ffffff;
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer; 
 }
 
 .user-desc {
@@ -472,7 +473,6 @@ input[type='password'].has-content {
   width: 125px; 
   height: 125px; 
 }
-
 
 .settings-buttons {
   display: flex;
