@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import userIcon from '../images/user-icon.png';
 import philantrolinkLogo from '../images/philantrolink-logo.png';
+import geolocationMap from '../images/geolocation-image.png';
 
 function Geolocation() {
   const navigate = useNavigate();
@@ -30,7 +31,6 @@ function Geolocation() {
   const goToSettings = () => {
     navigate('/settings');
   };
-
 
   return (
     <div className="app-wrapper-dashboard">
@@ -93,8 +93,10 @@ function Geolocation() {
         </div>
       </div>
       <div className="content-dashboard">
-        <h1>Geolocation</h1>
-        <p>This is the main content of the geolocation</p>
+      <h1 className="content-title2">Geolocation</h1>
+        <div className="geolocation-map-container">
+          <img src={geolocationMap} alt="Geolocation Map" className="geolocation-map" />
+        </div>
       </div>
     </div>
   );

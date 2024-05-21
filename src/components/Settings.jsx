@@ -35,7 +35,34 @@ function Settings() {
   const renderContent = () => {
     switch (activeSection) {
       case 'profile':
-        return <div>Edit Profile content goes here.</div>;
+        return (
+          <div className="edit-profile-content">
+            <h2>Edit Profile</h2>
+            <form className="edit-profile-form">
+              <div className="form-group">
+                <label htmlFor="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="role">Role</label>
+                <input type="text" id="role" name="role" placeholder="Role" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="description">Description</label>
+                <textarea id="description" name="description" placeholder="Description"></textarea>
+              </div>
+              <div className="form-group">
+                <label htmlFor="profilePicture">Profile Picture</label>
+                <input type="file" id="profilePicture" name="profilePicture" />
+              </div>
+              <button type="submit" className="save-button">Save Changes</button>
+            </form>
+          </div>
+        );
       case 'chats':
         return <div>Chats content goes here.</div>;
       case 'helpSupport':
