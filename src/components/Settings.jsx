@@ -6,6 +6,7 @@ import philantrolinkLogo from '../images/philantrolink-logo.png';
 function Settings() {
   const location = useLocation();
   const [activeSection, setActiveSection] = useState('profile');
+  const [activeChat, setActiveChat] = useState(null);
   const navigate = useNavigate();
 
   const goToDashboard = () => {
@@ -31,6 +32,29 @@ function Settings() {
   const goToSettings = () => {
     navigate('/settings');
   };
+
+  const chatList = [
+    { id: 1, name: 'Alice' },
+    { id: 2, name: 'Bob' },
+    { id: 3, name: 'Charlie' },
+  ];
+
+  const renderChatContent = () => (
+    <div className="chat-content">
+      <div className="chat-message">
+        <p className="chat-user">Alice:</p>
+        <p className="chat-text">Hey there! How can I help you today?</p>
+      </div>
+      <div className="chat-message">
+        <p className="chat-user">You:</p>
+        <p className="chat-text">I have a question about my account.</p>
+      </div>
+      <div className="chat-message">
+        <p className="chat-user">Alice:</p>
+        <p className="chat-text">Sure, what would you like to know?</p>
+      </div>
+    </div>
+  );
 
   const renderContent = () => {
     switch (activeSection) {
@@ -63,26 +87,26 @@ function Settings() {
             </form>
           </div>
         );
-      case 'chats':
-        return (
-          <div className="chats-content">
-            <h2>Chats</h2>
-            <div className="chat-box">
-              <div className="chat-message received">
-                <p>Hi there! How can I help you today?</p>
-                <span className="timestamp">10:00 AM</span>
+        case 'chats':
+          return (
+            <div className="chats-container">
+              <div className="chat-inbox">
+                {chatList.map(chat => (
+                  <div
+                    key={chat.id}
+                    className={`chat-inbox-item ${activeChat === chat.id ? 'active' : ''}`}
+                    onClick={() => setActiveChat(chat.id)}
+                  >
+                    <img src={userIcon} alt="User Icon" className="chat-inbox-icon" />
+                    <p className="chat-inbox-name">{chat.name}</p>
+                  </div>
+                ))}
               </div>
-              <div className="chat-message sent">
-                <p>I need some assistance with my account.</p>
-                <span className="timestamp">10:01 AM</span>
-              </div>
-              <div className="chat-message received">
-                <p>Sure, what seems to be the issue?</p>
-                <span className="timestamp">10:02 AM</span>
+              <div className="chat-content-wrapper">
+                {activeChat ? renderChatContent() : <p>Select a chat to view messages.</p>}
               </div>
             </div>
-          </div>
-        );
+          );
       case 'helpSupport':
         return (
           <div className="help-support-content">

@@ -561,53 +561,76 @@ input[type='password'].has-content {
   align-self: flex-end;
 }
 
-.chats-content {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.chat-box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.chat-message {
-  padding: 10px;
-  border-radius: 5px;
-  max-width: 60%;
-  font-family: Inter;
-  font-size: 14px;
-  position: relative;
-}
-
-.chat-message.received {
-  background-color: #f1f1f1;
-  align-self: flex-start;
-}
-
-.chat-message.sent {
-  background-color: #195392;
-  color: white;
-  align-self: flex-end;
-}
-
-.timestamp {
-  font-size: 12px;
-  color: #999999;
-  position: absolute;
-  bottom: -18px;
-  right: 10px;
-}
-
 .save-button:hover {
   background-color: #f0f0f0;
   color: #195392;
 }
 
-/* Help & Support Content */
+/* Chat Inbox */
+.chats-container {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.chat-inbox {
+  width: 30%;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.chat-inbox-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-inbox-item.active {
+  background-color: #d3d3d3;
+}
+
+.chat-inbox-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.chat-inbox-name {
+  font-family: Inter;
+  font-size: 16px;
+}
+
+/* Chat Content */
+.chat-content-wrapper {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.chat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.chat-user {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.chat-text {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .help-support-content {
   padding: 20px;
   background-color: #ffffff;
